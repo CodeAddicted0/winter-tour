@@ -1,0 +1,121 @@
+/* ===Navigation=== */
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+nav {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 4vw;
+  backdrop-filter: brightness(70%);
+  background: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo img {
+  height: auto;
+  width: 20vw;
+}
+
+.navmenu ul {
+  display: flex;
+}
+
+.navmenu ul li {
+  list-style: none;
+}
+
+.navmenu ul li a {
+  text-decoration: none;
+  padding: 1.5vh 1.5vw;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+
+.navmenu ul li a:hover {
+  background: #db383c;
+}
+
+.navmenu ul li a.active {
+  background: #db383c;
+}
+
+.burger {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    height: 35vh;
+    overflow: hidden;
+    grid-template-areas: "logo burger" "navmenu navmenu";
+    transition: all 0.5s ease;
+  }
+
+  .logo {
+    grid-area: logo;
+    margin: 3vh;
+  }
+
+  .logo img {
+    height: auto;
+    width: 50vw;
+  }
+
+  .navmenu {
+    grid-area: navmenu;
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navmenu ul li {
+    margin: 1vh;
+  }
+
+  .navmenu ul li a {
+    padding: 1vh 2vw;
+    font-size: 5vw;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+    grid-area: burger;
+    justify-self: end;
+    margin: 2.5vh;
+  }
+  .navheight {
+    height: 10vh;
+    overflow: hidden;
+  }
+
+  .burger * {
+    height: 0.6vh;
+    width: 8vw;
+    background: white;
+    margin: 0.8vh;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .logo img {
+    height: auto;
+    width: 25vh;
+  }
+
+  .navmenu ul li a {
+    padding: 1.5vh 2vw;
+    font-size: 2vh;
+  }
+}

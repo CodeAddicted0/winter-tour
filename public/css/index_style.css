@@ -1,0 +1,616 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===Landing Page=== */
+
+#landingPage {
+  height: initial;
+  width: 100%;
+  background: url("../img/bg_1.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.content {
+  color: white;
+  display: flex;
+  height: initial;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(70%);
+}
+
+.content h2 {
+  font-size: 4vw;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  margin-top: 8vh;
+  width: 80%;
+}
+
+.content p {
+  font-size: 2vw;
+  width: 80%;
+  margin: 6vh;
+  text-align: center;
+  font-family: "Castoro", serif;
+}
+
+.forbtn {
+  padding: 3vh 0vw;
+}
+
+.forbtn a {
+  padding: 2.5vh 2vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border: 0.24vw solid white;
+  background: none;
+  color: white;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.forbtn a:hover {
+  color: rgb(18, 121, 155);
+  background: white;
+}
+
+.switchbg {
+  display: flex;
+  justify-content: space-around;
+  padding: 12.3vh 0;
+  width: 100%;
+}
+
+.switchbg button {
+  padding: 2vh 3vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  background: rgb(240, 38, 41);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switchbg button:hover {
+  background: #033958;
+}
+
+/* Speciality Section */
+
+#speciality {
+  background: url(../img/special_bg.jpg) no-repeat center/ cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 8vh 0;
+}
+
+#speciality::before {
+  content: "";
+  background: #033958;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+}
+
+#speciality h2 {
+  display: block;
+  position: relative;
+  font-size: 3.5vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 6vh;
+  width: fit-content;
+  text-rendering: optimizelegibility;
+  color: #ffffff;
+}
+
+#speciality h2::after {
+  content: "";
+  width: 5vw;
+  height: 0.6vh;
+  background: #db383c;
+  display: block;
+  position: relative;
+  margin: 3vh auto;
+}
+
+.icongrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  justify-items: center;
+}
+
+.listicons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.listicons i {
+  font-size: 3.5vw;
+  filter: invert(1);
+}
+
+.listicons span {
+  padding: 2vw;
+  border: 0.5vh solid #0772ba;
+  border-radius: 50%;
+  height: 13vh;
+  width: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listicons h4 {
+  position: relative;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+  letter-spacing: 1px;
+  margin-top: 3vh;
+}
+
+.listicons h4::after {
+  content: "";
+  width: 4vw;
+  height: 0.4vh;
+  background: #0772ba;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.listicons p {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.3vw;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 3vh 0;
+  margin-bottom: 5vh;
+}
+
+/* ===PlaceList Page=== */
+
+#placeNames {
+  background: url("../img/list_bg.webp") no-repeat center center/cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-columns: 4% 1fr 4%;
+  grid-template-rows: 0.4fr 1fr 0.3fr auto;
+  position: relative;
+}
+
+#placeNames::before {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.headline {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.headline h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5vw;
+  font-weight: bold;
+  padding-bottom: 2vh;
+  color: #033958;
+}
+
+.headline h2::after {
+  content: "";
+  width: 7vw;
+  height: 0.6vh;
+  background: #db383c;
+  display: block;
+  position: relative;
+  margin: 3vh auto;
+}
+
+.placeList {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vh 2.5vw;
+  grid-template-rows: repeat(2, 40vh);
+}
+
+.secfoot {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+
+.secfoot button {
+  padding: 2vh 3vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  background: rgb(240, 38, 41);
+  cursor: pointer;
+}
+
+.secfoot button:hover {
+  background: #033958;
+}
+
+.listp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.placeList .listp img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.7);
+  transition: none;
+  object-fit: cover;
+}
+
+.placeList .listp > h2 {
+  position: absolute;
+  font-size: 2.5vw;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  padding: 1vh 1vw;
+  transition: all 0.5s ease;
+}
+
+.placeList .listp:hover > img {
+  filter: brightness(1);
+  transition: all 0.5s ease-out;
+}
+
+.placeList .listp:hover > h2 {
+  transform: translateY(-6vh);
+  backdrop-filter: brightness(0.5) contrast(2);
+}
+
+.placeList .listp button {
+  position: absolute;
+  padding: 2vh 2.5vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  background: rgb(240, 38, 41);
+  cursor: pointer;
+  letter-spacing: 1px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.placeList .listp button:hover {
+  background: #033958;
+}
+
+.placeList .listp:hover > button {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(6vh);
+}
+
+.banner {
+  grid-row: 4/5;
+  grid-column: 1/4;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Mobile Media Query */
+
+@media only screen and (max-width: 600px) {
+  /* ===Landing Page=== */
+
+  .content h2 {
+    font-size: 7vw;
+    margin-top: 5vh;
+  }
+
+  .content p {
+    font-size: 4vw;
+  }
+
+  .forbtn {
+    padding: 2.5vh 2vw;
+  }
+
+  .forbtn a {
+    padding: 2vh 2vw;
+    font-size: 5vw;
+    border: 0.8vw solid white;
+  }
+
+  .switchbg button {
+    padding: 2vh 6vw;
+    font-size: 4vw;
+  }
+
+  /* Speciality Section */
+
+  .icongrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  #speciality h2 {
+    font-size: 4vh;
+  }
+
+  #speciality h2::after {
+    width: 20vw;
+    height: 0.5vh;
+    margin: 3vh auto;
+  }
+
+  .listicons {
+    width: 90%;
+  }
+
+  .listicons span {
+    padding: 2vh;
+    border: 0.6vh solid #0772ba;
+    height: 23vh;
+    width: 23vh;
+  }
+
+  .listicons i {
+    font-size: 10vh;
+  }
+
+  .listicons h4 {
+    font-size: 3vh;
+    letter-spacing: 1px;
+    margin-top: 3vh;
+  }
+
+  .listicons h4::after {
+    width: 24vw;
+    height: 0.5vh;
+    margin: 0 auto;
+    margin-top: 3vh;
+  }
+
+  .listicons p {
+    font-size: 2.5vh;
+    margin: 3vh 0;
+    margin-bottom: 5vh;
+  }
+
+  /* ===PlaceList Page=== */
+
+  #placeNames {
+    grid-template-columns: 7% 1fr 7%;
+    grid-template-rows: 30vh 1fr 20vh auto;
+  }
+
+  .headline h2 {
+    font-size: 8vw;
+  }
+
+  .headline h2::after {
+    width: 25vw;
+    height: 0.4vh;
+  }
+
+  .placeList {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5vh 0vw;
+  }
+
+  .secfoot button {
+    padding: 2vh 3vw;
+    font-size: 4vw;
+  }
+
+  .placeList .listp > h2 {
+    position: absolute;
+    font-size: 6vw;
+    color: white;
+    border-radius: 10px;
+    padding: 1.5vh 3vw;
+  }
+
+  .placeList .listp button {
+    padding: 2vh 2.5vw;
+    font-size: 4vw;
+  }
+
+  .placeList .listp:hover > h2 {
+    transform: translateY(-5vh);
+  }
+
+  .placeList .listp:hover > button {
+    transform: translateY(5vh);
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .content h2 {
+    font-size: 3.5vh;
+    margin-top: 4vh;
+  }
+
+  .content p {
+    font-size: 2.5vh;
+    margin: 4vh;
+  }
+
+  .forbtn {
+    padding: 5vh 0vw;
+  }
+
+  .forbtn a {
+    padding: 2vh 4vw;
+    font-size: 2vh;
+    border: 0.5vh solid white;
+  }
+
+  .switchbg {
+    display: flex;
+    justify-content: space-around;
+    padding: 10vh 0;
+    width: 100%;
+  }
+
+  .switchbg button {
+    padding: 2vh 5vw;
+    font-size: 2vh;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    background: rgb(240, 38, 41);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  /* Speciality Section */
+
+  #speciality {
+    padding: 5vh 0;
+  }
+
+  .icongrid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #speciality h2 {
+    font-size: 3.5vh;
+    padding: 4vh;
+  }
+
+  #speciality h2::after {
+    content: "";
+    width: 10vw;
+    height: 0.6vh;
+  }
+
+  .listicons {
+    width: 100%;
+  }
+
+  .listicons i {
+    font-size: 5vh;
+    filter: invert(1);
+  }
+
+  .listicons span {
+    padding: 2vw;
+    height: 17vh;
+    width: 17vh;
+  }
+
+  .listicons h4 {
+    font-size: 2.5vh;
+  }
+
+  .listicons h4::after {
+    width: 10vw;
+    height: 0.4vh;
+    margin-top: 3vh;
+  }
+
+  .listicons p {
+    font-size: 2vh;
+    margin-bottom: 3vh;
+    width: 90%;
+  }
+
+  /* PlaceList Section */
+
+  .headline h2 {
+    font-size: 5vh;
+    padding-bottom: 0vh;
+  }
+
+  .headline h2::after {
+    width: 14vw;
+    height: 0.6vh;
+    margin: 3vh auto;
+  }
+
+  .secfoot button {
+    padding: 2vh 3vw;
+    font-size: 2.5vh;
+  }
+
+  .placeList .listp > h2 {
+    font-size: 2.5vh;
+    padding: 1.5vh 1.5vw;
+  }
+
+  .placeList .listp:hover > h2 {
+    transform: translateY(-5vh);
+  }
+
+  .placeList .listp button {
+    padding: 2vh 2.5vw;
+    font-size: 2vh;
+  }
+
+  .placeList .listp:hover > button {
+    transform: translateY(5vh);
+  }
+}

@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background: url("../img/header_bg.jpg") no-repeat center/ cover;
+  backdrop-filter: none;
+}
+
+#contact h2 {
+  font-size: 3.5vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0vh auto;
+  padding: 4vh;
+  width: fit-content;
+  text-rendering: optimizelegibility;
+  color: #393a3c;
+}
+
+#contact h2::after {
+  content: "";
+  width: 4vw;
+  height: 0.6vh;
+  background: #db383c;
+  display: block;
+  position: relative;
+  margin: 2vh auto;
+  margin-bottom: 0;
+}
+
+.conContainer {
+  display: flex;
+  padding: 5vh 3vw;
+}
+
+.contactInfo {
+  flex-basis: 32%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfo > * {
+  margin: 2vh 0;
+}
+
+span {
+  display: block;
+  margin: 1vh;
+  font-size: 1.4vw;
+  font-family: "Roboto", sans-serif;
+}
+
+span i {
+  margin-right: 1vw;
+}
+
+.contactInfo h3 {
+  font-size: 2.5vw;
+  color: #393a3c;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1vh;
+}
+
+.vcard {
+  font-size: 1.4vw;
+  font-family: "Roboto", sans-serif;
+}
+
+.vcard a {
+  text-decoration: none;
+  color: #db383c;
+}
+
+.inputInfo {
+  flex-basis: 68%;
+  padding: 0vh 1vw;
+}
+
+.inputInfo h3 {
+  font-size: 2.4vw;
+  font-family: "Roboto", sans-serif;
+  color: #393a3c;
+}
+
+.inputInfo p {
+  font-size: 1.4vw;
+  font-family: "Roboto", sans-serif;
+  margin: 2vh 0;
+}
+
+form ::placeholder {
+  color: #0772ba;
+  font-size: 1.3vw;
+  font-family: "Roboto", sans-serif;
+}
+
+form input:focus {
+  border: 1px solid #0772ba;
+}
+
+form:nth-child(3) {
+  margin-right: 0;
+}
+
+form input {
+  display: inline;
+  margin: 3vh 0;
+  border: 1px solid #929292;
+  margin-right: 2vw;
+  padding: 1.8vh 1.3vw;
+  outline: none;
+  font-size: 1.3vw;
+}
+
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 1.8vh 1.3vw;
+  font-size: 1.3vw;
+  border: 1px solid #929292;
+  outline: none;
+}
+
+form textarea:focus {
+  border: 1px solid #0772ba;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  background: #db383c;
+  border: none;
+  outline: none;
+  font-size: 1.4vw;
+  color: white;
+  font-weight: bold;
+  padding: 2vh 2vw;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    background: url(../img/header_bg.jpg) no-repeat / cover;
+    background-position: 80%;
+  }
+
+  #contact h2 {
+    font-size: 4.5vh;
+    padding: 4vh;
+  }
+
+  #contact h2::after {
+    width: 14vw;
+    height: 0.6vh;
+    margin: 1vh auto;
+  }
+
+  .conContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 4vw;
+  }
+
+  .contactInfo {
+    flex-basis: initial;
+  }
+
+  .contactInfo > * {
+    margin: 1vh 0;
+  }
+
+  .contactInfo h3 {
+    font-size: 3vh;
+    margin-bottom: 1vh;
+  }
+
+  span {
+    font-size: 2vh;
+    margin: 1vh;
+  }
+
+  .vcard {
+    font-size: 2vh;
+  }
+
+  .inputInfo {
+    flex-basis: initial;
+    padding: 0 0;
+    margin: 3vh 0;
+  }
+
+  .inputInfo h3 {
+    font-size: 3.5vh;
+  }
+
+  .inputInfo p {
+    font-size: 2.5vh;
+    margin: 2vh 0;
+  }
+
+  form ::placeholder {
+    font-size: 2.5vh;
+  }
+
+  form input:focus {
+    border: 1px solid #0772ba;
+  }
+
+  form:nth-child(3) {
+    margin-right: 0;
+  }
+
+  form input {
+    display: block;
+    margin-right: 0;
+    padding: 2vh 3vw;
+    font-size: 2vh;
+    width: 100%;
+  }
+
+  form textarea {
+    width: 100%;
+    padding: 2vh 3vw;
+    font-size: 2vh;
+    border: 1px solid #929292;
+  }
+
+  form textarea:focus {
+    border: 1px solid #0772ba;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    background: #db383c;
+    display: inline;
+    border: none;
+    width: fit-content;
+    outline: none;
+    font-size: 2.5vh;
+    color: white;
+    font-weight: bold;
+    padding: 2vh 6vw;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .conContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 4vw;
+  }
+
+  #contact h2 {
+    font-size: 4.5vh;
+    padding: 5vh;
+  }
+
+  #contact h2::after {
+    width: 14vw;
+    height: 0.6vh;
+    margin: 3vh auto;
+  }
+
+  .contactInfo {
+    flex-basis: initial;
+  }
+
+  .contactInfo > * {
+    margin: 1vh 0;
+  }
+
+  .contactInfo h3 {
+    font-size: 3vh;
+    margin-bottom: 1vh;
+  }
+
+  span {
+    font-size: 2vh;
+    margin: 1vh;
+  }
+
+  .vcard {
+    font-size: 2vh;
+  }
+
+  .inputInfo {
+    flex-basis: initial;
+    padding: 0 0;
+    margin: 3vh 0;
+  }
+
+  .inputInfo h3 {
+    font-size: 3.5vh;
+  }
+
+  .inputInfo p {
+    font-size: 2vh;
+    margin: 2vh 0;
+  }
+
+  form ::placeholder {
+    font-size: 2.5vh;
+  }
+
+  form input:focus {
+    border: 1px solid #0772ba;
+  }
+
+  form:nth-child(3) {
+    margin-right: 0;
+  }
+
+  form input {
+    display: block;
+    margin-right: 0;
+    padding: 2vh 3vw;
+    font-size: 2.5vh;
+    width: 100%;
+  }
+
+  form textarea {
+    width: 100%;
+    padding: 2vh 3vw;
+    font-size: 2vh;
+    border: 1px solid #929292;
+  }
+
+  form textarea:focus {
+    border: 1px solid #0772ba;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    background: #db383c;
+    display: inline;
+    border: none;
+    width: fit-content;
+    outline: none;
+    font-size: 2.5vh;
+    color: white;
+    font-weight: bold;
+    padding: 1.5vh 5vw;
+    margin-right: 3vw;
+  }
+}

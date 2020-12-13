@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background: url("../img/header_bg.jpg") no-repeat center/ cover;
+  backdrop-filter: none;
+}
+
+#news {
+  background: url(../img/list_bg.webp) no-repeat center/ cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#news::after {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+#news h2 {
+  font-size: 3.5vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0vh auto;
+  padding: 7vh;
+  width: fit-content;
+  text-rendering: optimizelegibility;
+  color: #033958;
+  position: relative;
+  z-index: 2;
+}
+
+#news h2::after {
+  content: "";
+  width: 4vw;
+  height: 0.6vh;
+  background: #db383c;
+  display: block;
+  position: relative;
+  margin: 2vh auto;
+}
+
+.gallerycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.newsgrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.newsgrid img {
+  width: 100%;
+  height: auto;
+}
+
+.newsgrid h3 {
+  font-size: 3vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 3vh 0;
+  padding: 2vh;
+  width: fit-content;
+  text-rendering: optimizelegibility;
+  color: #db383c;
+  align-self: flex-start;
+}
+
+.newsgrid p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2vw;
+  color: #033958;
+  padding: 1vh;
+}
+
+.newsgrid button.primary {
+  display: inline;
+  padding: 1.3vh 1.2vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: #0772ba;
+  color: white;
+  cursor: pointer;
+  margin: 2vh 0vw;
+  margin-right: 1.5vw;
+}
+
+.newsgrid .primaries {
+  align-self: flex-start;
+}
+
+.newsgrid button.danger {
+  display: inline;
+  padding: 1.8vh 1.5vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: #db383c;
+  color: white;
+  cursor: pointer;
+  align-self: flex-start;
+  margin: 2vh 0;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    background: url(../img/header_bg.jpg) no-repeat / cover;
+    background-position: 80%;
+  }
+
+  #news h2 {
+    font-size: 6vh;
+    margin: 0vh auto;
+    padding: 5vh;
+  }
+
+  #news h2::after {
+    width: 14vw;
+    height: 0.6vh;
+    margin: 2vh auto;
+  }
+
+  .newsgrid h3 {
+    font-size: 3vh;
+    margin: 2vh 0;
+  }
+
+  .newsgrid p {
+    font-size: 2vh;
+    margin: 0;
+  }
+
+  .newsgrid button.primary {
+    padding: 1.3vh 2.5vw;
+    font-size: 2vh;
+    margin: 2vh 0vw;
+    margin-right: 3.5vw;
+  }
+
+  .newsgrid button.danger {
+    padding: 1.8vh 2.5vw;
+    font-size: 2vh;
+    margin: 2vh 0;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  #news h2 {
+    font-size: 5.5vh;
+    margin: 0vh auto;
+    padding: 5vh;
+  }
+
+  #news h2::after {
+    width: 6vw;
+    height: 0.6vh;
+    margin: 2vh auto;
+  }
+
+  .newsgrid h3 {
+    font-size: 3.5vh;
+    margin: 3vh 0;
+    padding: 1vh 0;
+  }
+
+  .newsgrid p {
+    font-size: 2vh;
+    padding: 1vh 0;
+  }
+
+  .newsgrid button.primary {
+    padding: 1.3vh 1.2vw;
+    font-size: 2vh;
+    margin: 2vh 0vw;
+    margin-right: 1.5vw;
+  }
+
+  .newsgrid button.danger {
+    padding: 1.8vh 2vw;
+    font-size: 2vh;
+    margin: 2vh 0;
+  }
+}

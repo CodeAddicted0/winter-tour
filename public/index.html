@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index_style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro&family=Roboto&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Winter Tour</title>
+  </head>
+  <body>
+    <section id="landingPage" onload="slider()">
+      <header>
+        <nav class="">
+          <div class="logo">
+            <img src="img/logo.webp" alt="" />
+          </div>
+          <div class="navmenu">
+            <ul>
+              <li><a href="/" class="active">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/news">News</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="burger" onclick="burger()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </nav>
+      </header>
+      <div class="content">
+        <h2>Get the best out of your next Winter Tour!</h2>
+        <p>
+          We offer a wide variety of activities and tour packages and wish you
+          an adventurous new year – one full of new experiences and few
+          punctures!
+        </p>
+        <div class="forbtn">
+          <a href="#placeNames">Learn More</a>
+        </div>
+        <div class="switchbg">
+          <button id="prev">Prev</button>
+          <button id="next">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="speciality">
+      <h2>Why We’re Different</h2>
+      <div class="icongrid">
+        <div class="listicons">
+          <span><i class="fa fa-building" aria-hidden="true"></i></span>
+          <h4>Accommodation</h4>
+          <p>We offer the finest selection of top-notch hotels anywhere!</p>
+        </div>
+        <div class="listicons">
+          <span><i class="fa fa-plane" aria-hidden="true"></i></span>
+          <h4>Transportation</h4>
+          <p>
+            Whether it’s about air tickets or shuttle bus, we will set it up!
+          </p>
+        </div>
+        <div class="listicons">
+          <span><i class="fa fa-users" aria-hidden="true"></i></span>
+          <h4>Seasoned Agents</h4>
+          <p>Combined, the experience our agents have is centuries</p>
+        </div>
+        <div class="listicons">
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <h4>Easy Trip Planning</h4>
+          <p>Our travel agents are always ready to plan your perfect trip!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="placeNames">
+      <div class="headline">
+        <h2>Best Winter Trips</h2>
+      </div>
+      <div class="placeList">
+        <div class="listp">
+          <img src="img/place_1.jpg" alt="" srcset="" />
+          <h2>Jasná, Slovakia</h2>
+          <button>$160.00/pers.</button>
+        </div>
+        <div class="listp">
+          <img src="img/place_6.jpg" alt="" srcset="" />
+          <h2>Lapland, Finland</h2>
+          <button>$460.00/pers.</button>
+        </div>
+        <div class="listp">
+          <img src="img/place_5.jpg" alt="" srcset="" />
+          <h2>Neuschneher, Austria</h2>
+          <button>$630.00/pers.</button>
+        </div>
+        <div class="listp">
+          <img src="img/place_4.jpg" alt="" srcset="" />
+          <h2>Abisko, Sweden</h2>
+          <button>$650.00/pers.</button>
+        </div>
+      </div>
+      <div class="secfoot">
+        <button>View All Destinations</button>
+      </div>
+      <div class="banner">
+        <img src="img/banner.jpg" />
+      </div>
+    </section>
+
+    <section id="foot">
+      <footer>
+        <div class="footlogo">
+          <img src="img/logo.webp" />
+        </div>
+        <div class="footinfo">
+          <div class="uselinks">
+            <h4>Usefull Links</h4>
+            <a href="">Blog</a>
+            <a href="">Class Business</a>
+            <a href="">Projects</a>
+            <a href="">About Us</a>
+          </div>
+          <div class="cinfo">
+            <h4>Contact Info</h4>
+            <div class="thatinfo">
+              <span>E-mail:</span> support@validtheme.com<br /><span
+                >Contact Num:</span
+              >
+              +44-20-7328-4499
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/autobgchange.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

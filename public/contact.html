@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/contact_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Contact - Winter Tour</title>
+  </head>
+  <body>
+    <header>
+      <nav class="">
+        <div class="logo">
+          <img src="img/logo.webp" alt="" />
+        </div>
+        <div class="navmenu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/contact" class="active">Contact</a></li>
+          </ul>
+        </div>
+        <div class="burger" onclick="burger()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="conContainer">
+        <div class="contactInfo">
+          <div class="address">
+            <h3>Address:</h3>
+            <span
+              ><i class="fa fa-map-marker" aria-hidden="true"></i> 138 Atlantis
+              Ln Kingsport Illinois 121164</span
+            >
+          </div>
+          <div class="phones">
+            <h3>Phones:</h3>
+            <span
+              ><i class="fa fa-mobile" aria-hidden="true"></i> +1 800 345
+              6789</span
+            >
+            <span
+              ><i class="fa fa-phone" aria-hidden="true"></i>
+              800-2345-6789</span
+            >
+          </div>
+          <div class="email">
+            <h3>Email:</h3>
+            <span
+              ><i class="fa fa-envelope" aria-hidden="true"></i>
+              mail@demolink.org</span
+            >
+          </div>
+          <div class="vcard">
+            Download information as: <a href="#">vCard</a>
+          </div>
+        </div>
+        <div class="inputInfo">
+          <h3>Miscellaneous information:</h3>
+          <p>
+            Email us with any questions or inquiries or use our contact data.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Phone" />
+            <textarea
+              cols="30"
+              rows="7"
+              placeholder="Message"
+              aria-required="true"
+              required
+              title=""
+            ></textarea>
+            <input type="submit" value="Send" />
+            <input type="reset" value="Clear" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="foot">
+      <footer>
+        <div class="footlogo">
+          <img src="img/logo.webp" />
+        </div>
+        <div class="footinfo">
+          <div class="uselinks">
+            <h4>Usefull Links</h4>
+            <a href="">Blog</a>
+            <a href="">Class Business</a>
+            <a href="">Projects</a>
+            <a href="">About Us</a>
+          </div>
+          <div class="cinfo">
+            <h4>Contact Info</h4>
+            <div class="thatinfo">
+              <span>E-mail:</span> support@validtheme.com<br /><span
+                >Contact Num:</span
+              >
+              +44-20-7328-4499
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>
