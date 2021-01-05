@@ -21,6 +21,7 @@ html {
     ),
     url("../img/bg_1.jpg") no-repeat center / cover;
   background-attachment: fixed;
+  image-rendering: optimizeSpeed;
 }
 
 .content {
@@ -221,6 +222,7 @@ html {
   grid-template-columns: 4% 1fr 4%;
   grid-template-rows: 0.4fr 1fr 0.3fr auto;
   position: relative;
+  image-rendering: optimizeSpeed;
 }
 
 #placeNames::before {
@@ -306,6 +308,7 @@ html {
   filter: brightness(0.7);
   transition: none;
   object-fit: cover;
+  image-rendering: optimizeSpeed;
 }
 
 .placeList .listp > h2 {
@@ -367,6 +370,7 @@ html {
 .banner img {
   width: 100%;
   cursor: pointer;
+  image-rendering: optimizeSpeed;
 }
 
 /* Mobile Media Query */
