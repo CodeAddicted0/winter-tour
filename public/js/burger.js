@@ -10,8 +10,6 @@ let pickup = () => {
   $("nav").addClass("navheight");
   $(".navmenu").css({
     display: "none",
-    "place-self": "center",
-    transition: "all, 0.5s",
   });
   $("nav").css({ "grid-template-rows": "10vh" });
 };
@@ -19,9 +17,9 @@ let pickup = () => {
 if (mediaQuery.matches) {
   $(
     (burger = function () {
-      if ($("nav").attr("class") == "navheight") {
+      if ($("nav").attr("class") === "navheight") {
         dropdown();
-      } else if ($("nav").attr("class") == "") {
+      } else if ($("nav").attr("class") === "") {
         pickup();
       }
     })
