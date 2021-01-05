@@ -10,7 +10,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 5vh 4vw;
-  backdrop-filter: brightness(70%);
+  /* backdrop-filter: brightness(70%); */
   background: none;
   font-family: "Roboto", sans-serif;
 }
@@ -32,9 +32,10 @@ nav {
   text-decoration: none;
   padding: 1.5vh 1.5vw;
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   font-weight: bold;
   transition: all 0.3s ease-in;
+  text-transform: uppercase;
 }
 
 .navmenu ul li a:hover {
@@ -72,6 +73,8 @@ nav {
 
   .navmenu {
     grid-area: navmenu;
+    place-self: center;
+    transition: all 0.5s ease-in;
   }
 
   .navmenu ul {
@@ -111,11 +114,11 @@ nav {
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
   .logo img {
     height: auto;
-    width: 25vh;
+    width: 22vh;
   }
 
   .navmenu ul li a {
     padding: 1.5vh 2vw;
-    font-size: 2vh;
+    font-size: 1.7vh;
   }
 }

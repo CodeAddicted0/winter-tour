@@ -12,9 +12,14 @@ html {
 /* ===Landing Page=== */
 
 #landingPage {
-  height: initial;
+  height: 80vh;
   width: 100%;
-  background: url("../img/bg_1.jpg") no-repeat center center/cover;
+  background: -webkit-linear-gradient(
+      60deg,
+      rgba(0, 127, 255, 0.7) 17%,
+      rgba(9, 9, 121, 0.7) 100%
+    ),
+    url("../img/bg_1.jpg") no-repeat center / cover;
   background-attachment: fixed;
 }
 
@@ -25,32 +30,68 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: brightness(70%);
+  /* backdrop-filter: brightness(70%); */
 }
 
-.content h2 {
+.content h2.primary {
   font-size: 4vw;
   text-align: center;
   font-family: "Source Code Pro", monospace;
-  margin-top: 8vh;
+  margin-top: 12vh;
   width: 80%;
+  text-transform: uppercase;
+  animation: fade-left 1s ease-in 0.5s 1 backwards;
 }
 
-.content p {
-  font-size: 2vw;
-  width: 80%;
-  margin: 6vh;
+.content h2.secondary {
+  font-size: 4vw;
   text-align: center;
-  font-family: "Castoro", serif;
+  font-family: "Source Code Pro", monospace;
+  text-transform: uppercase;
+  animation: fade-right 1s ease-in 0.5s 1 backwards;
+}
+
+@keyframes fade-right {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .forbtn {
-  padding: 3vh 0vw;
+  margin: 10vh 0;
 }
 
 .forbtn a {
-  padding: 2.5vh 2vw;
-  font-size: 1.5vw;
+  display: inline-block;
+  padding: 2vh 1.8vw;
+  font-size: 1.6vw;
   font-weight: bold;
   border: 0.24vw solid white;
   background: none;
@@ -58,35 +99,12 @@ html {
   transition: all 0.3s;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  animation: fade-up 0.7s ease-in 1s backwards;
 }
 
 .forbtn a:hover {
   color: rgb(18, 121, 155);
   background: white;
-}
-
-.switchbg {
-  display: flex;
-  justify-content: space-around;
-  padding: 12.3vh 0;
-  width: 100%;
-}
-
-.switchbg button {
-  padding: 2vh 3vw;
-  font-size: 1.5vw;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  background: none;
-  color: white;
-  background: rgb(240, 38, 41);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.switchbg button:hover {
-  background: #033958;
 }
 
 /* Speciality Section */
@@ -106,7 +124,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 #speciality h2 {
@@ -356,28 +374,23 @@ html {
 @media only screen and (max-width: 600px) {
   /* ===Landing Page=== */
 
-  .content h2 {
-    font-size: 7vw;
-    margin-top: 5vh;
+  #landingPage {
+    height: initial;
   }
 
-  .content p {
-    font-size: 4vw;
+  .content h2.primary {
+    font-size: 2.5vh;
+    margin-top: 10vh;
   }
 
-  .forbtn {
-    padding: 2.5vh 2vw;
+  .content h2.secondary {
+    font-size: 4vh;
   }
 
   .forbtn a {
-    padding: 2vh 3vw;
-    font-size: 4.5vw;
-    border: 0.8vw solid white;
-  }
-
-  .switchbg button {
-    padding: 2vh 6vw;
+    padding: 1.5vh 3vw;
     font-size: 4vw;
+    border: 0.8vw solid white;
   }
 
   /* Speciality Section */
@@ -484,44 +497,23 @@ html {
 }
 
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  .content h2 {
-    font-size: 3.5vh;
-    margin-top: 4vh;
+  #landingPage {
+    height: initial;
   }
 
-  .content p {
-    font-size: 2.5vh;
-    margin: 4vh;
+  .content h2.primary {
+    font-size: 3vh;
+    margin-top: 6vh;
   }
 
-  .forbtn {
-    padding: 5vh 0vw;
+  .content h2.secondary {
+    font-size: 4vh;
   }
 
   .forbtn a {
-    padding: 2vh 4vw;
-    font-size: 2vh;
-    border: 0.5vh solid white;
-  }
-
-  .switchbg {
-    display: flex;
-    justify-content: space-around;
-    padding: 10vh 0;
-    width: 100%;
-  }
-
-  .switchbg button {
-    padding: 2vh 5vw;
-    font-size: 2vh;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    background: none;
-    color: white;
-    background: rgb(240, 38, 41);
-    cursor: pointer;
-    transition: all 0.2s ease;
+    padding: 1.8vh 4vw;
+    font-size: 2.5vh;
+    border: 0.3vh solid white;
   }
 
   /* Speciality Section */
