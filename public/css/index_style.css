@@ -9,10 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* ===Landing Page=== */
 
 #landingPage {
-  height: 80vh;
+  height: initial;
   width: 100%;
   background: -webkit-linear-gradient(
       60deg,
@@ -21,7 +25,8 @@ html {
     ),
     url("../img/bg_1.jpg") no-repeat center / cover;
   background-attachment: fixed;
-  image-rendering: optimizeSpeed;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {
@@ -108,24 +113,41 @@ html {
   background: white;
 }
 
+.clouds {
+  position: relative;
+  height: 30vh;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.clouds img {
+  position: absolute;
+  bottom: -15vh;
+  max-width: 100%;
+  animation: cloud calc(1s * var(--i)) linear infinite;
+}
+
+@keyframes cloud {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
 /* Speciality Section */
 
 #speciality {
-  background: url(../img/special_bg.jpg) no-repeat center/ cover;
-  background-attachment: fixed;
   position: relative;
   padding: 8vh 0;
-}
-
-#speciality::before {
-  content: "";
-  background: #033958;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.8;
 }
 
 #speciality h2 {
@@ -138,7 +160,7 @@ html {
   padding: 6vh;
   width: fit-content;
   text-rendering: optimizelegibility;
-  color: #ffffff;
+  color: #033958;
 }
 
 #speciality h2::after {
@@ -168,7 +190,7 @@ html {
 
 .listicons i {
   font-size: 3.5vw;
-  filter: invert(1);
+  color: #033958;
 }
 
 .listicons span {
@@ -184,7 +206,7 @@ html {
 
 .listicons h4 {
   position: relative;
-  color: #ffffff;
+  color: #033958;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.3vw;
@@ -205,7 +227,7 @@ html {
 
 .listicons p {
   position: relative;
-  color: #ffffff;
+  color: #033958;
   font-size: 1.3vw;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -222,7 +244,6 @@ html {
   grid-template-columns: 4% 1fr 4%;
   grid-template-rows: 0.4fr 1fr 0.3fr auto;
   position: relative;
-  image-rendering: optimizeSpeed;
 }
 
 #placeNames::before {
@@ -308,7 +329,6 @@ html {
   filter: brightness(0.7);
   transition: none;
   object-fit: cover;
-  image-rendering: optimizeSpeed;
 }
 
 .placeList .listp > h2 {
@@ -370,7 +390,6 @@ html {
 .banner img {
   width: 100%;
   cursor: pointer;
-  image-rendering: optimizeSpeed;
 }
 
 /* Mobile Media Query */
@@ -395,6 +414,17 @@ html {
     padding: 1.5vh 3vw;
     font-size: 4vw;
     border: 0.8vw solid white;
+  }
+
+  .clouds {
+    height: 10vh;
+  }
+
+  .clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloud calc(1s * var(--i)) linear infinite;
   }
 
   /* Speciality Section */
@@ -520,6 +550,17 @@ html {
     border: 0.3vh solid white;
   }
 
+  .clouds {
+    height: 10vh;
+  }
+
+  .clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloud calc(1s * var(--i)) linear infinite;
+  }
+
   /* Speciality Section */
 
   #speciality {
@@ -549,7 +590,6 @@ html {
 
   .listicons i {
     font-size: 5vh;
-    filter: invert(1);
   }
 
   .listicons span {
